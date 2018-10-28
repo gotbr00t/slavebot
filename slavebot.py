@@ -55,7 +55,7 @@ while True:
 	elif prompt == "":
 		print (say())
 	elif "mac?" in prompt:
-		print (mac)
+		print (mac())
 	elif "What is your name?" in prompt:
 		print (AI_NAME)
 	elif "Who is your master?" in prompt:
