@@ -13,6 +13,18 @@ def say():
 	"Anything that you need?", "Say something!!"]
 	return random.choice(random_words)
 
+def deleteafile():
+	try:
+		file = input("Location?: ")
+		file = str(file)
+		print ("Deleting file: " + file + "\n")
+		print ("please wait ....." + "\n")
+		time.sleep(3)
+		os.remove(file)
+		print ("File has been deleted!" + "\n")
+	except WindowsError:
+		print ("Couldn't find the file, Try again please")
+
 def recyclebin():
 	print ("Emptying the Recycle Bin, please wait..")
 	time.sleep(3)
@@ -50,6 +62,8 @@ while True:
 	if "What is my ip?" in prompt:
 		print (localip())
 		print (externalip())
+	elif "Delete a file" in prompt:
+		print (deleteafile())
 	elif "Empty the recycle bin" in prompt:
 		print (recyclebin())
 	elif prompt == "":
