@@ -3,7 +3,31 @@ import uuid, re, datetime
 import urllib.request
 from win32api import GetUserName
 import random, time
-import winshell
+import winshell, os
+
+ascii = """
+
+ _____ _                ______       _   
+/  ___| |               | ___ \     | |  
+\ `--.| | __ ___   _____| |_/ / ___ | |_ 
+ `--. \ |/ _` \ \ / / _ \ ___ \/ _ \| __|
+/\__/ / | (_| |\ V /  __/ |_/ / (_) | |_ 
+\____/|_|\__,_| \_/ \___\____/ \___/ \__|
+
+
+ _   _   __   _____ 
+| | | | /  | |  _  |
+| | | | `| | | |/' |
+| | | |  | | |  /| |
+\ \_/ / _| |_\ |_/ /
+ \___/  \___(_)___/ 
+                    
+
+
+"""
+
+print (ascii)
+print ("\n")
 
 Master = "c0d3ninja"
 AI_NAME = "Ex Machina"
