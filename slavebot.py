@@ -1,9 +1,12 @@
+from __future__ import print_function
+import psutil
 import socket
 import uuid, re, datetime
 import urllib.request
 from win32api import GetUserName
 import random, time
 import winshell, os
+import platform
 
 ascii = """
 
@@ -86,6 +89,10 @@ while True:
 	if "What is my ip?" in prompt:
 		print (localip())
 		print (externalip())
+	elif "Processor?" in prompt:
+		print (platform.processor())
+	elif "RAM?" in prompt:
+		print (psutil.virtual_memory())
 	elif "Delete a file" in prompt:
 		print (deleteafile())
 	elif "Empty the recycle bin" in prompt:
