@@ -4,4 +4,7 @@ An AI slave bot (for Windows) that will do all the dirty work for you! So lay ba
 
 # INSTALLATION
 
-You will need the winshell module: pip install winshell
+::Modules that you need to install::
+
+pip install psutil
+pip install winshell
