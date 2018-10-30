@@ -35,6 +35,27 @@ print ("\n")
 Master = "c0d3ninja"
 AI_NAME = "Ex Machina"
 
+def help():
+	commands = ["1. What is my ip?", "2. Platform?", "3. RAM?", "4. CPU", 
+	"5. MAC?", "6. Pocessor?", "7. Delete a file", "8. Empty the recycle bin", 
+	"9. What is your name?", "10. Who is your master?", "11. Datetime?", 
+	"12. Username?", "13. Shutdown!"]
+	for names in commands:
+		print (names)
+	return
+
+def ping():
+	who = input("Who do you want to ping?: ")
+	os.system("ping " + who)
+
+def restart():
+	ask = input("Are you sure that want to restart your computer?: ")
+	if ask == "yes":
+		print ("System will restart in 10 seconds.")
+		os.system("shutdown /r /t 10")
+	else:
+		pass
+
 def say():
 	random_words = ["Don't leave this blank", "What can I do for you?",
 	"Anything that you need?", "Say something!!"]
@@ -89,6 +110,16 @@ while True:
 	if "What is my ip?" in prompt:
 		print (localip())
 		print (externalip())
+	elif "!Ping" in prompt:
+		print (ping())
+	elif "Restart!" in prompt:
+		print (restart())
+	elif "Help!" in prompt:
+		print (help())
+	elif "Platform?" in prompt:
+		print (platform.platform())
+	elif "CPU?" in prompt:
+		print (psutil.cpu_percent())
 	elif "Processor?" in prompt:
 		print (platform.processor())
 	elif "RAM?" in prompt:
@@ -99,7 +130,7 @@ while True:
 		print (recyclebin())
 	elif prompt == "":
 		print (say())
-	elif "mac?" in prompt:
+	elif "MAC?" in prompt:
 		print (mac())
 	elif "What is your name?" in prompt:
 		print (AI_NAME)
@@ -107,8 +138,8 @@ while True:
 		print ("My masters name is c0d3ninja!!")
 	elif "Datetime?" in prompt:
 		print (currentime())
-	elif "username?" in prompt:
+	elif "Username?" in prompt:
 		print (username())
-	elif "shutdown!" in prompt:
+	elif "Shutdown!" in prompt:
 		print ("Shutting down now " + Master)
 		exit()
