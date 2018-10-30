@@ -102,14 +102,23 @@ def username():
 
 print ("WELCOME " + Master + "\n")
 print (AI_NAME + " is now loading......." + "\n")
-time.sleep(3)
+time.sleep(1)
+print (".%10")
+time.sleep(1)
+print ("..%40")
+time.sleep(1)
+print ("...%70")
+time.sleep(1)
+print ("....%100" + "\n")
+time.sleep(1)
+print (AI_NAME + " IS NOW READY TO SERVE YOU!!" + "\n")
 
 while True:
 	prompt = input("Yes Master?: ")
 	if "What is my ip?" in prompt:
 		print (localip())
 		print (externalip())
-	elif "!Ping" in prompt:
+	elif "Ping!" in prompt:
 		print (ping())
 	elif "Restart!" in prompt:
 		print (restart())
