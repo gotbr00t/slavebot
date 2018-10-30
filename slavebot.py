@@ -39,10 +39,9 @@ def help():
 	commands = ["1. What is my ip?", "2. Platform?", "3. RAM?", "4. CPU", 
 	"5. MAC?", "6. Pocessor?", "7. Delete a file", "8. Empty the recycle bin", 
 	"9. What is your name?", "10. Who is your master?", "11. Datetime?", 
-	"12. Username?", 13. "Ping!", "14. Shutdown!"]
+	"12. Username?", "13. Ping!", "14. Shutdown!"]
 	for names in commands:
 		print (names)
-	return
 
 def ping():
 	who = input("Who do you want to ping?: ")
